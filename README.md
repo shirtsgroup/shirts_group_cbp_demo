@@ -9,8 +9,7 @@ This is an example repository for learning git/github functionality
 
 ### Copyright
 
-Copyright (c) 2023, Lenny Fobe
-
+Copyright (c) 2023, Shirts Group
 
 #### Acknowledgements
  
