@@ -97,5 +97,18 @@ def test_get_evens_errors():
     with pytest.raises(TypeError):
         out = shirts_group_cbp_demo.get_evens([1,2,3,4.564])
 
+def test_check_prime():
+    numbers_1 = [1, 2, 3, 4, 5]
+    bool_lst_1 = [shirts_group_cbp_demo.check_prime(i) for i in numbers_1]
+    assert bool_lst_1 == [False, True, True, False, True]
+    
+    numbers_2 = range(1, 101)
+    bool_lst_2 = [shirts_group_cbp_demo.check_prime(i) for i in numbers_2]
+    assert sum(bool_lst_2) == 25
+
+    with pytest.raises(TypeError):
+        out_1 = shirts_group_cbp_demo.check_prime(1.5)
+        out_2 = shirts_group_cbp_demo.check_prime(-1)
+
 # Test look_and_say
 
