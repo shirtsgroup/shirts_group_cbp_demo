@@ -4,6 +4,8 @@ import numpy as np
 def get_odds(number_list):
     odds = []
     for num in number_list:
+        if not isinstance(num, (int, np.integer)):
+            raise TypeError("This function only works with integer inputs")
         if num % 2 != 0:
             odds.append(num)
     
@@ -12,6 +14,8 @@ def get_odds(number_list):
 def get_evens(number_list):
     evens = []
     for num in number_list:
+        if not isinstance(num, (int, np.integer)):
+            raise TypeError("This function only works with integer inputs")
         if num % 2 == 0:
             evens.append(num)
     
@@ -19,9 +23,15 @@ def get_evens(number_list):
 
 
 def check_prime(number):
-    for factor in range(2, number):
-        if number % factor == 0:
-            return False
+    if number < 0 or type(number) != int:
+        raise TypeError("This function only works for positive integers.")
+
+    if number == 1:
+        return False
+    else:
+        for factor in range(2, number):
+            if number % factor == 0:
+                return False
     return True
 
 
@@ -47,7 +57,7 @@ def look_and_say(number):
     say_string += str(count) + c
     return int(say_string)
 
-def get_look_and_say_sequence(inital_number, length = 10):
+def get_look_and_say_sequence(inital_number, length = 5):
     look_and_say_list = [inital_number]
     for i in range(1, length):
         look_and_say_list.append(look_and_say(look_and_say_list[i-1]))
