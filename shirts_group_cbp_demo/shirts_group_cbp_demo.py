@@ -53,10 +53,6 @@ def get_look_and_say_sequence(inital_number, length = 10):
         look_and_say_list.append(look_and_say(look_and_say_list[i-1]))
     return(look_and_say_list)
 
-
-
-
-
 if __name__ == "__main__":
     # Do something if this file is invoked on its own
     pass
