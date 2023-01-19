@@ -51,7 +51,7 @@ def look_and_say(number):
     say_string += str(count) + c
     return int(say_string)
 
-def get_look_and_say_sequence(inital_number, length = 10):
+def get_look_and_say_sequence(inital_number, length = 5):
     look_and_say_list = [inital_number]
     for i in range(1, length):
         look_and_say_list.append(look_and_say(look_and_say_list[i-1]))
