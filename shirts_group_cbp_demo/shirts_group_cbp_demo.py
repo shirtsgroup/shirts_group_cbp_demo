@@ -23,9 +23,15 @@ def get_evens(number_list):
 
 
 def check_prime(number):
-    for factor in range(2, number):
-        if number % factor == 0:
-            return False
+    if number < 0 or type(number) != int:
+        raise TypeError("This function only works for positive integers.")
+
+    if number == 1:
+        return False
+    else:
+        for factor in range(2, number):
+            if number % factor == 0:
+                return False
     return True
 
 
