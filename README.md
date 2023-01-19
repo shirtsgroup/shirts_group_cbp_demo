@@ -11,7 +11,7 @@ This is an example repository for learning git/github functionality
 
 To install this repository install the conda environemnt included in `environment.txt`.
 ```
-conda env create --f environment.yml
+conda env create -f environment.yml
 ```
 Then run the following in the top directory of this repository:
 ```
