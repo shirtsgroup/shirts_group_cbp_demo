@@ -126,3 +126,13 @@ def test_get_look_and_say_sequence_types():
     out = shirts_group_cbp_demo.get_look_and_say_sequence(1)
     assert isinstance(out, list)
 
+@pytest.mark.parametrize('input,expected',
+                          [(1,11),
+                           (2, 12),
+                           (13, 1113),
+                           (300, 1320),
+                           (1010, 11101110)]
+    )
+def test_look_and_say(input, expected):
+    out = shirts_group_cbp_demo.look_and_say(input)
+    assert out == expected
