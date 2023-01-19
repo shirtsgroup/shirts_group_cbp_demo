@@ -7,7 +7,7 @@ Shirts Group CBP Demo
 
 This is an example repository for learning git/github functionality
 
-### Install
+### Installation
 
 To install this repository install the conda environemnt included in `environment.txt`.
 ```
