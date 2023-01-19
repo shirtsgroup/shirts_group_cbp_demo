@@ -110,5 +110,17 @@ def test_check_prime():
         out_1 = shirts_group_cbp_demo.check_prime(1.5)
         out_2 = shirts_group_cbp_demo.check_prime(-1)
 
-# Test look_and_say
+# Test get_look_and_say_sequence
+@pytest.mark.parametrize('input,expected',
+                         [(1, [1,11,21,1211,111221]),
+                          (2, [2,12,1112,3112,132112]),
+                          (3, [3,13,1113,3113,132113]),
+                          (4, [4,14,1114,3114,132114])]
+    )
+def test_get_look_and_say_sequence(input, expected):
+    # Multiple look and say sequences
+    out = shirts_group_cbp_demo.get_look_and_say_sequence(input)
+    assert out == expected
 
+def test_get_look_and_say_sequence_types():
+    out = shirts_group_cbp_demo.get_look_and_say_sequence(input)
