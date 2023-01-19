@@ -7,6 +7,17 @@ Shirts Group CBP Demo
 
 This is an example repository for learning git/github functionality
 
+### Install
+
+To install this repository install the conda environemnt included in `environment.txt`.
+```
+conda env create --f environment.yml
+```
+Then run the following in the top directory of this repository:
+```
+pip install -e .
+```
+
 ### Copyright
 
 Copyright (c) 2023, Shirts Group
