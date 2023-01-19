@@ -4,6 +4,8 @@ import numpy as np
 def get_odds(number_list):
     odds = []
     for num in number_list:
+        if not isinstance(num, (int, np.integer)):
+            raise TypeError("This function only works with integer inputs")
         if num % 2 != 0:
             odds.append(num)
     
@@ -12,6 +14,8 @@ def get_odds(number_list):
 def get_evens(number_list):
     evens = []
     for num in number_list:
+        if not isinstance(num, (int, np.integer)):
+            raise TypeError("This function only works with integer inputs")
         if num % 2 == 0:
             evens.append(num)
     
