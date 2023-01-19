@@ -110,5 +110,6 @@ def test_get_look_and_say_sequence(input, expected):
     assert out == expected
 
 def test_get_look_and_say_sequence_types():
-    out = shirts_group_cbp_demo.get_look_and_say_sequence(input)
+    out = shirts_group_cbp_demo.get_look_and_say_sequence(1)
+    assert isinstance(out, list)
 
